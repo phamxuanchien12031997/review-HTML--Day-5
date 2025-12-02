@@ -1,0 +1,42 @@
+<!-- Tạo form nhập thông tin người dùng:
+- Tên người dùng (text)
+- Email (email)
+- Nút Thêm người dùng: Khi nhấn sẽ thêm người dùng vào table hiển thị danh sách người dùng
+Table hiển thị người dùng:
+- Cột: STT, Tên, Email, Hành động
+- Hàng người dùng có nút Xóa để xóa người dùng
+Lưu ý: Sử dụng localStorage để lưu dữ liệu -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./user.css">
+</head>
+<body>
+    <div id="user-img">
+        <img src="./img/avata3.jpg" alt="avata" width="68" height="68">
+        <div id="myname">Chiến Phạm</div>
+    </div>
+    <form id="user-form">
+        <label for="userNameInput">User Name</label>
+        <input type="text" id="userNameInput" name="userNameInput" placeholder="Nhập tên người dùng" required>
+        <label for="emailInput">Email</label>
+        <input type="email" id="emailInput" name="emailInput" placeholder="Nhập địa chỉ email" required>
+        <button id="submit">Submit</button>
+    </form>
+    <table id="user-table">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>name</th>
+                <th>Email</th>
+                <th>Act</th>
+            </tr>
+        </thead>
+        <tbody id="user-tbody"></tbody>
+    </table>
+    <script src="./user.js"></script>
+</body>
+</html>
